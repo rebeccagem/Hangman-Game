@@ -12,7 +12,7 @@ var winCount = 0;
 var lossCount = 0;
 var guessesLeft = 10;
 
-//*************
+//holding some variables here for later
 var letterIndex;
 var userGuess;
 
@@ -35,20 +35,18 @@ updateScoreboard();
 // This function is run whenever the user presses a key.
 document.onkeyup = function(event) {
     userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-    console.log(userGuess);
     letterIndex = alphabet.indexOf(userGuess);
+    //This checks to make sure user pressed a letter, not any other key
     if (letterIndex === -1){
     }
     else{
         letterPressed();
-
     }
-//this calls the function to update the scoreboard after each user guess
-updateScoreboard();
-}
 
+}
+//If the user presses a letter, then this function will run
 function letterPressed(){
-    console.log("userguess: "+userGuess);
+    console.log("letterPressed: "+userGuess);
     letterIndex = monster.indexOf(userGuess)
     console.log(letterIndex);
     if (letterIndex === -1){
@@ -60,11 +58,13 @@ function letterPressed(){
 
     else{
         dashes[letterIndex] = userGuess;
-        console.log(dashes);
+        console.log('Dashes: '+dashes);
     }
+    //this calls the function to update the scoreboard after each user guess
     updateScoreboard();
 }
 
+//this checks to see if the wrong guesses have already been guessed
 function searchLettersGuessed() {
     for (i=0; i<wrongLetters.length;i++){
         if (getUserGuess() === wrongLetters[i]){
