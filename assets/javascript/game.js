@@ -10,7 +10,7 @@
 //score keepers
 var winCount = 0;
 var lossCount = 0;
-var guessesLeft = 10;
+var guessesLeft = 5;
 
 //holding some variables here for later
 var letterIndex;
@@ -60,8 +60,17 @@ function letterPressed(){
         dashes[letterIndex] = userGuess;
         console.log('Dashes: '+dashes);
     }
+    
+
+    if(guessesLeft === 0){
+        lossCount++;
+        alert("You Lose!");
+    }
+
     //this calls the function to update the scoreboard after each user guess
     updateScoreboard();
+    
+    console.log("Guesses Left: " + guessesLeft)
 }
 
 //this checks to see if the wrong guesses have already been guessed
@@ -99,3 +108,8 @@ chooseMonster();
 
 //If user guess is equal to a character within the chosen monster then display user guess
 
+//scoring stuff
+if(guessesLeft === 0){
+        alert("you lose!")
+    }
+    console.log(guessesLeft)
