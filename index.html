@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hangman Game</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
 </head>
-<body>
-    <h1>Hangman</h1>
-    <div class="scoreboard">
-        <h2>Word to guess:</h2>
-        <h2 id="guessMonster">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _</h2>
-        <h2>Letters guessed:</h2><span id="guessesWrong"> </span>
-        <h2>Guesses left:</h2><span id="guessesLeft"></span>
-        <h2>Wins:</h2><span id="winCounter"></span>
-        <h2>Losses:</h2><span id="lossCounter"></span>
-    </div>
 
+<body>
+    <h1>D&D Hangman</h1>
+    <p>What monsters might lurk in the shadows ahead?</p>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img id="mainImage" src="http://via.placeholder.com/300x300">
+            </div>
+            <div class="col scoreboard">
+                <h2>Word to guess:</h2>
+                <h2 id="guessMonster">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _</h2>
+                <h2>Letters guessed:</h2>
+                <span id="guessesWrong"> </span>
+            </div>
+            <div class="col scoreboard">
+                <h2>Guesses left:</h2>
+                <span id="guessesLeft"></span>
+                <h2>Wins:</h2>
+                <span id="winCounter"></span>
+                <h2>Losses:</h2>
+                <span id="lossCounter"></span>
+            </div>
+        </div>
+    </div>
+    </div>
     <script type="text/javascript" src="./assets/javascript/game.js"></script>
 </body>
+
 </html>

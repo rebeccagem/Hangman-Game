@@ -1,5 +1,6 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
 }
 
 .scoreboard {
@@ -12,4 +13,8 @@ h1 {
     text-align: center;
     font-size:40px;
     line-height: 45px;
+}
+
+p {
+    padding-bottom:20px;
 }
