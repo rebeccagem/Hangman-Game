@@ -87,8 +87,12 @@ function checkWin() {
     }
     if (lengthCount === dashes.length){
         winCount++;
-        alert("You Win!");
-        gameOver();
+    
+        setTimeout(function () {
+            alert("You Win!");
+            }, 200);
+            window.setTimeout(gameOver, 400);
+            
     }
 }
 
@@ -118,7 +122,8 @@ function getUserGuess() {
 function gameOver() {
     wrongLetters = [];
     guessesLeft = 5;
-    dashes = [];
+    dashes = [];    
     chooseMonster();
+    updateScoreboard();
 
 }
