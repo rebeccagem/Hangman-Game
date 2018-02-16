@@ -1,20 +1,47 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
+    background-image: url("./sbook-repeat-hor.png");
+    background-color: #f1f1f2;
+    background-repeat: repeat-y;
 }
 
 .scoreboard {
-    font-size:25px;
+    font-size:28px;
     line-height:45px;
     text-align: center;
+    font-family: 'Nanum Brush Script', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#guessMonster {
+    font-family: 'Rock Salt';
+    letter-spacing: 3px;
+    font-size: 30px;
+    padding-bottom:10px;
+}
+
+#winCounter #lossCounter
+
+#guessesLeft {
+    font-family: 'Rock Salt';
+    font-size: 28px;
+    font-weight: 600;
 }
 
 h1 {
     text-align: center;
     font-size:40px;
     line-height: 45px;
+    padding-top:20px;
+    font-family: 'Rock Salt', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 2px;
 }
 
 p {
     padding-bottom:20px;
+    padding-top:10px;
+    font-family: 'Nanum Brush Script';
+    font-size: 27px;
+    font-weight: 600;
 }
+
