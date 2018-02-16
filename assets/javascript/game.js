@@ -1,11 +1,13 @@
 //Arrays for the game
-var monsterList = ["harpy", "kobold", "dryad", "hobgoblin", "manticore", "demilich", "chimera", "aboleth", "kraken", "dracolich", "owlbear", "cockatrice", "pseudodragon", "rakshasa", "minotaur", "hippogriff"];
+var monsterList = ["aboleth", "chimera", "cockatrice", "demilich", "dracolich", "dryad", "harpy", "hippogriff", "hobgoblin", "kobold", "kraken", "manitcore", "minotaur", "owlbear", "banderhobb", "rakshasa"];
 var monster = "";
 var lettersInMonster = [];
 var numBlanks = 0;
 var dashes = [];
 var wrongLetters = [];
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var imageArray = ["./assets/images/Placeholder-Aboleth.jpg","./assets/images/Placeholder-Chimera.jpg","./assets/images/Placeholder-Cockatrice.jpg", "./assets/images/Placeholder-Demilich.jpg","./assets/images/Placeholder-Dracolich.jpg","./assets/images/Placeholder-Dryad.jpg", "./assets/images/Placeholder-Harpy.jpg", "./assets/images/Placeholder-Hippogriff.jpg", "./assets/images/Placeholder-Hobgoblin.jpg", "./assets/images/Placeholder-Kobold.jpg", "./assets/images/Placeholder-Kraken.jpg", "./assets/images/Placeholder-Manticore.jpg", "./assets/images/Placeholder-Minotaur.jpg", "./assets/images/Placeholder-Owlbear.jpg", "./assets/images/Placeholder-Pseudodragon.jpg", "./assets/images/Placeholder-Rakshasa.jpg"];
+
 
 //score keepers
 var winCount = 0;
@@ -15,6 +17,7 @@ var guessesLeft = 5;
 //holding some variables here for later
 var letterIndex;
 var userGuess;
+var randomNum;
 
 //this updates the scoreboard when the user first loads the page
 chooseMonster();
@@ -23,7 +26,8 @@ updateScoreboard();
 // This function makes the computer choose a random monster
 function chooseMonster() {
 
-    monster = monsterList[Math.floor(Math.random() * monsterList.length)];
+    randomNum = Math.floor(Math.random() * monsterList.length);
+    monster = monsterList[randomNum];
     console.log(monster);
     //this seperates the word into letters
     lettersInMonster = monster.split("");
@@ -87,8 +91,14 @@ function checkWin() {
     }
     if (lengthCount === dashes.length){
         winCount++;
-    
+        //images changing
+        var myImage = imageArray[randomNum];
+        console.log(myImage);
+        document.getElementById("mainImage").src = myImage;
+
+
         setTimeout(function () {
+            
             alert("You Win!");
             }, 200);
             window.setTimeout(gameOver, 400);
@@ -128,9 +138,5 @@ function gameOver() {
 
 }
 
-//images changing
-var myImage = document.getElementById("mainImage");
 
-var imageArray = ["./assets/images/Placeholder-Aboleth.jpg","./assets/images/Placeholder-Chimera.jpg","./assets/images/Placeholder-Cockatrice.jpg", "./assets/images/Placeholder-Demilich.jpg","./assets/images/Placeholder-Dracolich.jpg","./assets/images/Placeholder-Dryad.jpg", "./assets/images/Placeholder-Harpy.jpg", "./assets/images/Placeholder-Hippogriff.jpg", "./assets/images/Placeholder-Hobgoblin.jpg", "./assets/images/Placeholder-Kobold.jpg", "./assets/images/Placeholder-Kraken.jpg", "./assets/images/Placeholder-Manticore.jpg", "./assets/images/Placeholder-Minotaur.jpg", "./assets/images/Placeholder-Owlbear.jpg", "./assets/images/Placeholder-Pseudodragon.jpg", "./assets/images/Placeholder-Rakshasa.jpg"];
 
-console.log(imageArray);
