@@ -6,7 +6,7 @@ var numBlanks = 0;
 var dashes = [];
 var wrongLetters = [];
 var alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var imageArray = ["./assets/images/Placeholder-Aboleth.jpg","./assets/images/Placeholder-Chimera.jpg","./assets/images/Placeholder-Cockatrice.jpg", "./assets/images/Placeholder-Demilich.jpg","./assets/images/Placeholder-Dracolich.jpg","./assets/images/Placeholder-Dryad.jpg", "./assets/images/Placeholder-Harpy.jpg", "./assets/images/Placeholder-Hippogriff.jpg", "./assets/images/Placeholder-Hobgoblin.jpg", "./assets/images/Placeholder-Kobold.jpg", "./assets/images/Placeholder-Kraken.jpg", "./assets/images/Placeholder-Manticore.jpg", "./assets/images/Placeholder-Minotaur.jpg", "./assets/images/Placeholder-Owlbear.jpg", "./assets/images/Placeholder-Pseudodragon.jpg", "./assets/images/Placeholder-Rakshasa.jpg"];
+var imageArray = ["./assets/images/aboleth.png","./assets/images/chimera.png","./assets/images/cockatrice.png", "./assets/images/demilich.png","./assets/images/Placeholder-Dracolich.jpg","./assets/images/Placeholder-Dryad.jpg", "./assets/images/Placeholder-Harpy.jpg", "./assets/images/Placeholder-Hippogriff.jpg", "./assets/images/Placeholder-Hobgoblin.jpg", "./assets/images/Placeholder-Kobold.jpg", "./assets/images/Placeholder-Kraken.jpg", "./assets/images/manticore.png", "./assets/images/Placeholder-Minotaur.jpg", "./assets/images/Placeholder-Owlbear.jpg", "./assets/images/banderhobb.png", "./assets/images/Placeholder-Rakshasa.jpg"];
 
 
 //score keepers
