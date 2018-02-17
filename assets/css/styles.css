@@ -15,7 +15,7 @@ body {
 
 #guessMonster {
     font-family: 'Rock Salt';
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     font-size: 30px;
     padding-bottom:10px;
 }
@@ -35,6 +35,7 @@ h1 {
     padding-top:20px;
     font-family: 'Rock Salt', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 2px;
+    padding: 20px;
 }
 
 p {
